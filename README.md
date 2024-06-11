@@ -1,8 +1,5 @@
 - 👋 Hi, I’m @Dera-Enebeli
-- 👀 I’m interested in learning how to code and would love to do it full time
-- 🌱 I’m currently learning HTML, CSS, JAVA to become a front end engineer
-- 💞️ I’m looking to collaborate on 
-- 📫 How to reach me ...
+A passionate self-taught frontend developer from Nigeria-
 
 <!---
 Dera-Enebeli/Dera-Enebeli is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
