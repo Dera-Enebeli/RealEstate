@@ -18,8 +18,8 @@ export const navLink = [
     },
     {
         id:"7443",
-        text: "Event/blog",
-        url: "/event/blog",
+        text: "Blog",
+        url: "/blog",
     },
     {
         id:"7444",
@@ -28,7 +28,7 @@ export const navLink = [
     },
     {
         id:"7445",
-        text: "Contact Us",
-        url: "/contact us",
+        text: "Contact",
+        url: "/contact",
     },
 ]

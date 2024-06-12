@@ -11,6 +11,7 @@ import Slider from "./Slider";
 import Body from "./pages/Body";
 // import App from "./App";
 import Caro from "./Caro";
+import Blog from "./pages/Blog";
 // import Carousel from "./carousel.components";
 
 export default function App() {
@@ -54,6 +55,10 @@ export default function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/blog",
+          element: <Blog />
         },
       ],
     },
