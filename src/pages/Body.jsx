@@ -181,50 +181,50 @@ export default function Body() {
       </section>
 
       <Cards />
- <section className="flex flex-col bg-slate-100 px-4 sm:px-10 md:py-10 md:px-20 gap-6 items-center lg:flex-row">
-      <div className="flex-none">
-        <img
-          src="/main_apt8.jpg"
-          alt="Apartment"
-          className="h-64 mt-5 sm:h-80 md:h-[40rem] w-full lg:w-[30rem] shrink-0 shadow-lg object-cover rounded-md border-t-4 border-r-4 border-b-4 border-l-4 border-white"
-        />
-      </div>
-
-      <div className="flex-grow p-4 sm:p-8 md:p-12 lg:p-16">
-        <p className="text-lg font-semibold pb-3">Luxury Apartment</p>
-        <h1 className="text-2xl md:text-3xl font-bold mb-4">
-          Comfort is our <br /> Top Priority for you.
-        </h1>
-        <p className="text-gray-700 pb-6">
-          12th City is one of Africa’s most respected names in real estate
-          development and is recognized as a premier developer of Class A
-          residential and commercial properties throughout the continent.
-          legacy.
-        </p>
-
-        <div className="flex flex-col md:flex-row gap-4">
-          <ul className="list-disc pl-5">
-            <li className="p-1">Lorem ipsum dolor sit amet.</li>
-            <li className="p-1">Lorem ipsum dolor sit amet.</li>
-          </ul>
-          <ul className="list-disc pl-5">
-            <li className="p-1">Lorem ipsum dolor sit amet.</li>
-            <li className="p-1">Lorem ipsum dolor sit amet.</li>
-          </ul>
+      <section className="flex flex-col bg-slate-100 px-4 sm:px-10 md:py-10 md:px-20 gap-6 items-center lg:flex-row">
+        <div className="flex-none">
+          <img
+            src="/main_apt8.jpg"
+            alt="Apartment"
+            className="h-64 mt-5 sm:h-80 md:h-[40rem] w-full lg:w-[30rem] shrink-0 shadow-lg object-cover rounded-md border-t-4 border-r-4 border-b-4 border-l-4 border-white"
+          />
         </div>
 
-        <div className="bg-orange-100 mt-6 p-4 border-l-4 border-newBlue">
-          <p>
-            "The magic thing about home is that it feels good to leave, and it
-            feels even better to come back."
+        <div className="flex-grow p-4 sm:p-8 md:p-12 lg:p-16">
+          <p className="text-lg font-semibold pb-3">Luxury Apartment</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            Comfort is our <br /> Top Priority for you.
+          </h1>
+          <p className="text-gray-700 pb-6">
+            12th City is one of Africa’s most respected names in real estate
+            development and is recognized as a premier developer of Class A
+            residential and commercial properties throughout the continent.
+            legacy.
           </p>
-        </div>
 
-        <button className="bg-newBlue text-white p-4 rounded-sm mt-6">
-          Book Now
-        </button>
-      </div>
-    </section>
+          <div className="flex flex-col md:flex-row gap-4">
+            <ul className="list-disc pl-5">
+              <li className="p-1">Lorem ipsum dolor sit amet.</li>
+              <li className="p-1">Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <ul className="list-disc pl-5">
+              <li className="p-1">Lorem ipsum dolor sit amet.</li>
+              <li className="p-1">Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </div>
+
+          <div className="bg-orange-100 mt-6 p-4 border-l-4 border-newBlue">
+            <p>
+              "The magic thing about home is that it feels good to leave, and it
+              feels even better to come back."
+            </p>
+          </div>
+
+          <button className="bg-newBlue text-white p-4 rounded-sm mt-6">
+            Book Now
+          </button>
+        </div>
+      </section>
 
       <section className="relative">
         <div>
@@ -370,9 +370,15 @@ export default function Body() {
         </div>
       </section> */}
 
+<img src="./logo4.png" alt="" />
+
+
       <section className="text-center flex justify-center flex-col items-center md:mt-[5rem] lg:mb-[rem]">
         <div className="text-orange-400">From our Blog</div>
-        <div className="text-5xl font-bold">Latest News & Events</div>
+        <div>
+          <div className="text-2xl md:text-5xl font-bold">Latest News & Events</div>
+          <p className="text-red-600 mt-5 text-3xl">No News or Events yet....</p>
+        </div>
       </section>
     </div>
   );
