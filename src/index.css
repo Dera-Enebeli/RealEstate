@@ -28,3 +28,27 @@
 .slick-prev:focus, .slick-next:focus {
   background-color: #1A264D; /* Ensure focus color is the same as default */
 }
+
+.bg-lightblue {
+  background-color: #f0f8ff; /* Adjust to your desired color */
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.border-b {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.border-t {
+  border-top: 1px solid #e5e7eb;
+}
