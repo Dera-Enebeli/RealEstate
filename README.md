@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Dera-Enebeli
-  A passionate self-taught frontend developer from Nigeria. -
+  A passionate frontend developer from Nigeria. -
 
 - 📧 How can your reach me:
 Deraslogic@gmail.com
