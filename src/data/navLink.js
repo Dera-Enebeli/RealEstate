@@ -8,7 +8,7 @@ export const navLink = [
     },
     {
         id:"7441",
-        text: "About Us",
+        text: "About",
         url: "/about",
     },
     {

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { HiMiniBars2 } from "react-icons/hi2";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Changed to HiOutlineMenu and HiOutlineX
 import { Link } from "react-router-dom";
 import { navLink } from "../data/navLink";
-import { HiX } from "react-icons/hi";
-
-<title>About us</title>
 
 export default function Header() {
   const [navShow, setNavShow] = useState(false);
@@ -13,7 +10,7 @@ export default function Header() {
     <header className="relative px-4 flex justify-between items-center bg-lightblue lg:sticky w-full lg:top-0 lg:px-[10rem] z-50">
       <h1 className="text-gray-600 font-semibold text-lg">
         <Link to="/">
-          <img src="/best_logo.png" alt="" className="w-[15rem] shrink-0" />
+          <img src="/best_logo.png" alt="Logo" className="w-[10rem] md:w-[15rem] shrink-0" />
         </Link>
       </h1>
 
@@ -24,8 +21,8 @@ export default function Header() {
         } md:hidden`}
       >
         <div className="flex justify-between items-center p-4 border-b">
-          <img src="/best_logo.png" alt="Logo" className="w-[10rem]" />
-          <HiX
+          <img src="/best_logo.png" alt="Logo" className="w-[8rem] sm:w-[10rem]" />
+          <HiOutlineX
             className="text-gray-600 font-bold text-xl cursor-pointer"
             onClick={() => setNavShow(!navShow)}
           />
@@ -70,7 +67,7 @@ export default function Header() {
         onClick={() => setNavShow(!navShow)}
         className="flex shadow-lg p-4 cursor-pointer md:hidden"
       >
-        <HiMiniBars2 className="text-gray-600 font-bold text-lg" />
+        <HiOutlineMenu className="text-gray-600 font-bold text-lg" />
       </div>
     </header>
   );
