@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoBedOutline } from "react-icons/io5";
 import { BiRuler, BiRightArrowAlt } from "react-icons/bi";
 import { GoGraph } from "react-icons/go";
 import { Link } from "react-router-dom";
+import $ from 'jquery';
+import './slideNavigation'; 
 
 const properties = [
   {
@@ -39,61 +41,30 @@ const properties = [
     area: "1600 m",
     price: "₦468,000"
   },
-  {
-    id: 3,
-    title: "Majestic Residence in Victoria Island",
-    location: "Victoria Island",
-    image: "/main_apt1.jpg",
-    description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    bed: 3,
-    size: "10x10 m",
-    area: "1600 m",
-    price: "₦468,000"
-  },
-  {
-    id: 3,
-    title: "Majestic Residence in Victoria Island",
-    location: "Victoria Island",
-    image: "/main_apt1.jpg",
-    description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    bed: 3,
-    size: "10x10 m",
-    area: "1600 m",
-    price: "₦468,000"
-  },
-  {
-    id: 3,
-    title: "Majestic Residence in Victoria Island",
-    location: "Victoria Island",
-    image: "/main_apt1.jpg",
-    description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    bed: 3,
-    size: "10x10 m",
-    area: "1600 m",
-    price: "₦468,000"
-  },
-  // Add more properties as needed
 ];
 
-export default function Project() {
+const Project = () => {
+  useEffect(() => {
+  }, []);
+
   return (
     <div>
-      {/* Navigation Bar */}
       <div className="bg-white py-4 shadow-md rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
-        <div className="container mx-auto flex justify-between items-center px-6">
-          <div className="flex space-x-6">
-            <Link to="#buy" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Buy</Link>
-            <Link to="#rent" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Rent</Link>
-            <Link to="#sell" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Sell</Link>
-            <Link to="#airbnb" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Airbnb</Link>
-            <Link to="#shortlets" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Shortlets</Link>
-            <Link to="#commercial" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Commercial</Link>
-            <Link to="#vacation" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Vacation</Link>
+        <div className="container mx-auto px-6">
+          <div className="flex justify-start items-center overflow-x-hidden">
+            <div className="nav-links flex space-x-6" id="navLinks">
+              <Link to="#buy" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Buy</Link>
+              <Link to="#rent" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Rent</Link>
+              <Link to="#sell" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Sell</Link>
+              <Link to="#airbnb" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Airbnb</Link>
+              <Link to="#shortlets" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Shortlets</Link>
+              <Link to="#commercial" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Commercial</Link>
+              <Link to="#vacation" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Vacation</Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Properties Section */}
       <div className="px-6 bg-customWhite lg:px-[10rem] py-12">
         <h1 className="text-2xl text-black md:text-4xl font-bold mb-8">
           Latest Properties
@@ -141,3 +112,5 @@ export default function Project() {
     </div>
   );
 }
+
+export default Project;
