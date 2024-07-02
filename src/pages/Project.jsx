@@ -4,8 +4,8 @@ import { IoBedOutline } from "react-icons/io5";
 import { BiRuler, BiRightArrowAlt } from "react-icons/bi";
 import { GoGraph } from "react-icons/go";
 import { Link } from "react-router-dom";
-import $ from 'jquery';
-import './slideNavigation'; 
+import $ from "jquery";
+import "./slideNavigation";
 
 const properties = [
   {
@@ -13,53 +13,84 @@ const properties = [
     title: "Unique Villa With Private Beach",
     location: "Banana Island Lagos",
     image: "/apt1.jpg",
-    description: "Lorem ipsum dolor sit amet, ad aliquip incididunt deserunt ut dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description:
+      "Lorem ipsum dolor sit amet, ad aliquip incididunt deserunt ut dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     bed: 3,
     size: "10x10 m",
     area: "1600 m",
-    price: "₦2,490,000"
+    price: "₦2,490,000",
   },
   {
     id: 2,
     title: "Gorgeous Country House",
     location: "Lekki Phase 1",
     image: "/apt2.jpg",
-    description: "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description:
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     bed: 3,
     size: "10x10 m",
     area: "1600 m",
-    price: "₦3,300 / per Month"
+    price: "₦3,300 / per Month",
   },
   {
     id: 3,
     title: "Majestic Residence in Victoria Island",
     location: "Victoria Island",
     image: "/main_apt1.jpg",
-    description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     bed: 3,
     size: "10x10 m",
     area: "1600 m",
-    price: "₦468,000"
+    price: "₦468,000",
   },
 ];
 
 const Project = () => {
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
 
   return (
-    <div>
-      <div className="bg-white py-4 shadow-md rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
+       <div>
+      {/* Navigation Bar */}
+      <div className="bg-white py-4 shadow-md flex flex-wrap rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
         <div className="container mx-auto px-6">
-          <div className="flex justify-start items-center overflow-x-hidden">
-            <div className="nav-links flex space-x-6" id="navLinks">
-              <Link to="#buy" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Buy</Link>
-              <Link to="#rent" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Rent</Link>
-              <Link to="#sell" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Sell</Link>
-              <Link to="#airbnb" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Airbnb</Link>
-              <Link to="#shortlets" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Shortlets</Link>
-              <Link to="#commercial" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Commercial</Link>
-              <Link to="#vacation" className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">Vacation</Link>
+          <div className="flex flex-wrap justify-center items-center text-center">
+            <div className="nav-links flex flex-wrap justify-center space-x-6" id="navLinks">
+              <Link
+                to="#buy"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Buy
+              </Link>
+              <Link
+                to="#rent"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Rent
+              </Link>
+              <Link
+                to="#sell"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Sell
+              </Link>
+              <Link
+                to="#airbnb"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Airbnb
+              </Link>
+              <Link
+                to="#shortlets"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Shortlets
+              </Link>
+              <Link
+                to="#commercial"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Commercial
+              </Link>
+              <Link
+                to="#vacation"
+                className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
+                Vacation
+              </Link>
             </div>
           </div>
         </div>
@@ -111,6 +142,6 @@ const Project = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Project;
