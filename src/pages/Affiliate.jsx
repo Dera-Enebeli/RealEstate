@@ -15,7 +15,7 @@ import {
 export default function AffiliateProgram() {
   return (
     <>
-      <header className="bg-gradient-to-r from-[#FED7AA] to-[#FED7AA] text-white py-16 text-center">
+      <header className="bg-gradient-to-r from-[#FED7AA] to-mainBlue text-white py-16 text-center">
         <h1 className="text-4xl font-bold mb-4">Want to work with us or become an agent?</h1>
         <p className="text-lg">Join our affiliate program and be part of our ever-growing team</p>
       </header>
@@ -23,19 +23,19 @@ export default function AffiliateProgram() {
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="flex flex-col items-center p-6 border rounded-md shadow-md bg-white">
-            <FaEnvelope className="text-4xl text-[#FED7AA] mb-4" />
+            <FaEnvelope className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Email Address</h3>
             <p className="text-gray-600 mt-2">info@12thcityrealestate.ng</p>
           </div>
           <div className="flex flex-col items-center p-6 border rounded-md shadow-md bg-white">
-            <FaPhone className="text-4xl text-[#FED7AA] mb-4" />
+            <FaPhone className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Phone Number</h3>
             <p className="text-gray-600 mt-2">+234 9164768748</p>
           </div>
           <div className="flex flex-col items-center p-6 border rounded-md shadow-md bg-white">
-            <FaMapMarkerAlt className="text-4xl text-[#FED7AA] mb-4" />
+            <FaMapMarkerAlt className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Office Address</h3>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 mt-2 text-center">
               Unit III, Plot 204 Pius Anyim Street, Off Olusegun Obasanjo Way,
               Wuye, Abuja FCT
             </p>
@@ -54,7 +54,7 @@ export default function AffiliateProgram() {
                     className="border border-gray-300 p-3 rounded-md w-full"
                     placeholder="Enter your name"
                   />
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaUser />
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export default function AffiliateProgram() {
                     className="border border-gray-300 p-3 rounded-md w-full"
                     placeholder="Enter email address"
                   />
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaEnvelope />
                   </span>
                 </div>
@@ -80,7 +80,7 @@ export default function AffiliateProgram() {
                     className="border border-gray-300 p-3 rounded-md w-full"
                     placeholder="Enter phone number"
                   />
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaPhone />
                   </span>
                 </div>
@@ -93,7 +93,7 @@ export default function AffiliateProgram() {
                     className="border border-gray-300 p-3 rounded-md w-full"
                     placeholder="Enter your address"
                   />
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaAddressCard />
                   </span>
                 </div>
@@ -106,7 +106,7 @@ export default function AffiliateProgram() {
                     className="border border-gray-300 p-3 rounded-md w-full"
                     placeholder="Date of birth"
                   />
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaCalendarAlt />
                   </span>
                 </div>
@@ -122,7 +122,7 @@ export default function AffiliateProgram() {
                     <option>Master's Degree</option>
                     <option>Doctorate</option>
                   </select>
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaGraduationCap />
                   </span>
                 </div>
@@ -137,7 +137,7 @@ export default function AffiliateProgram() {
                     <option>3-5 years</option>
                     <option>5+ years</option>
                   </select>
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaBriefcase />
                   </span>
                 </div>
@@ -149,7 +149,7 @@ export default function AffiliateProgram() {
                     type="file"
                     className="border border-gray-300 p-3 rounded-md w-full"
                   />
-                  <span className="absolute right-3 top-3 text-[#FED7AA]">
+                  <span className="absolute right-3 top-3 text-mainBlue">
                     <FaFileUpload />
                   </span>
                 </div>
@@ -161,7 +161,7 @@ export default function AffiliateProgram() {
                 <textarea
                   className="border border-gray-300 p-3 rounded-md w-full h-32"
                   placeholder="Enter message"></textarea>
-                <span className="absolute right-3 top-3 text-[#FED7AA]">
+                <span className="absolute right-3 top-3 text-mainBlue">
                   <FaPencilAlt />
                 </span>
               </div>
@@ -169,7 +169,7 @@ export default function AffiliateProgram() {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-[#FED7AA] text-white px-8 py-4 rounded-md font-bold hover:bg-[#FED7AA]-700">
+                className="bg-mainBlue text-white px-8 py-4 rounded-md font-bold hover:bg-[#FED7AA]-700">
                 SUBMIT
               </button>
             </div>

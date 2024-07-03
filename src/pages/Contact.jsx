@@ -1,13 +1,21 @@
 import React from "react";
 import { HiHome } from "react-icons/hi";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaUser, FaPencilAlt } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaUser,
+  FaPencilAlt,
+} from "react-icons/fa";
 
 export default function ContactPage() {
   return (
     <>
       <section>
         <div className="px-6 bg-customWhite lg:px-[10rem] py-12">
-          <h1 className="text-2xl text-black md:text-4xl font-bold mb-8">Contact Us</h1>
+          <h1 className="text-2xl text-black md:text-4xl font-bold mb-8">
+            Contact Us
+          </h1>
           <div className="flex items-center">
             <HiHome size={25} className="mr-2 text-[#FED7AA]" />
             <p className="inline-block text-gray-700 font-semibold">
@@ -20,17 +28,17 @@ export default function ContactPage() {
       <div className="p-8 bg-white shadow-lg max-w-7xl mx-auto mt-10 rounded-md">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           <div className="flex flex-col items-center p-6 border rounded-md">
-            <FaEnvelope className="text-4xl text-[#FED7AA] mb-4" />
+            <FaEnvelope className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Email Address</h3>
             <p className="text-gray-600 mt-2">info@12thcityrealestate.ng</p>
           </div>
           <div className="flex flex-col items-center p-6 border rounded-md">
-            <FaPhone className="text-4xl text-[#FED7AA] mb-4" />
+            <FaPhone className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Phone Number</h3>
             <p className="text-gray-600 mt-2">+234 9164768748</p>
           </div>
           <div className="flex flex-col items-center p-6 border rounded-md">
-            <FaMapMarkerAlt className="text-4xl text-[#FED7AA] mb-4" />
+            <FaMapMarkerAlt className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Office Address</h3>
             <p className="text-gray-600 mt-2">
               Unit III, Plot 204 Pius Anyim Street, Off Olusegun Obasanjo Way,
@@ -50,7 +58,7 @@ export default function ContactPage() {
                   className="border border-gray-300 p-3 rounded-md w-full"
                   placeholder="Enter your name"
                 />
-                <span className="absolute right-3 top-3 text-[#FED7AA]">
+                <span className="absolute right-3 top-3 text-mainBlue">
                   <FaUser />
                 </span>
               </div>
@@ -63,7 +71,7 @@ export default function ContactPage() {
                   className="border border-gray-300 p-3 rounded-md w-full"
                   placeholder="Enter email address"
                 />
-                <span className="absolute right-3 top-3 text-[#FED7AA]">
+                <span className="absolute right-3 top-3 text-mainBlue">
                   <FaEnvelope />
                 </span>
               </div>
@@ -76,7 +84,7 @@ export default function ContactPage() {
                   className="border border-gray-300 p-3 rounded-md w-full"
                   placeholder="Enter phone number"
                 />
-                <span className="absolute right-3 top-3 text-[#FED7AA]">
+                <span className="absolute right-3 top-3 text-mainBlue">
                   <FaPhone />
                 </span>
               </div>
@@ -88,7 +96,7 @@ export default function ContactPage() {
               <textarea
                 className="border border-gray-300 p-3 rounded-md w-full h-32"
                 placeholder="Enter message"></textarea>
-              <span className="absolute right-3 top-3 text-[#FED7AA]">
+              <span className="absolute right-3 top-3 text-mainBlue">
                 <FaPencilAlt />
               </span>
             </div>
@@ -96,7 +104,7 @@ export default function ContactPage() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-[#FED7AA] text-white px-8 py-4 rounded-md font-bold">
+              className="bg-maintext-mainBlue text-white px-8 py-4 rounded-md font-bold">
               SUBMIT
             </button>
           </div>

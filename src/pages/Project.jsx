@@ -52,7 +52,7 @@ const Project = () => {
   return (
        <div>
       {/* Navigation Bar */}
-      <div className="bg-white py-4 shadow-md flex flex-wrap rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
+      <div className="bg-white py-4 shadow-lg flex flex-wrap rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center items-center text-center">
             <div className="nav-links flex flex-wrap justify-center space-x-6" id="navLinks">
