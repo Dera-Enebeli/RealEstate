@@ -5,7 +5,7 @@ import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
 export default function Footer() {
   return (
     <footer className="bg-mainBlue text-white py-16 mt-[10rem]">
-      <div className=" flex justify-center">
+      <div className="hidden md:flex justify-center">
         <img src="./ODLA white.png" alt="" className="w-[27rem] h-[15rem]" />
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-5">

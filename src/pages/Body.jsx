@@ -71,15 +71,15 @@ export default function Body() {
             <div className="flex justify-between gap-6">
               <div className="flex justify-center items-center">
                 <IoBedOutline className="text-newBlue" />
-                <h1>4 Bed</h1>
+                <h1 className=" text-sm font-semibold" >4 Bed</h1>
               </div>
               <div className="flex justify-center items-center">
                 <BiRuler />
-                <h1>10x10 m</h1>
+                <h1 className=" text-sm font-semibold" >10x10 m</h1>
               </div>
               <div className="flex justify-center items-center">
                 <GoGraph />
-                <h1>1600 m</h1>
+                <h1 className=" text-sm font-semibold" >1600 m</h1>
               </div>
             </div>
 

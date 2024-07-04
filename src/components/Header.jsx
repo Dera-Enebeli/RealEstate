@@ -35,8 +35,7 @@ export default function Header() {
         className={`z-50 w-full shadow-md transition-all duration-300 ease-in-out ${
           showFixedNav ? "fixed top-0 bg-lightblue" : "relative bg-lightblue"
         }`}
-        style={{ top: showFixedNav ? '0' : '0' }}
-      >
+        style={{ top: showFixedNav ? "0" : "0" }}>
         <div className="relative px-4 flex justify-between items-center lg:px-[10rem]">
           <h1 className="text-gray-600 font-semibold text-lg">
             <Link to="/">
@@ -52,8 +51,7 @@ export default function Header() {
           <nav
             className={`fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white shadow-md z-50 transform transition-transform duration-300 ease-in-out ${
               navShow ? "translate-x-0" : "-translate-x-full"
-            } md:hidden`}
-          >
+            } md:hidden`}>
             <div className="flex justify-between items-center p-4 border-b">
               <img
                 src="/best_logo.png"
@@ -74,8 +72,7 @@ export default function Header() {
                   onClick={() => {
                     setNavShow(false);
                     window.scrollTo(0, 0);
-                  }}
-                >
+                  }}>
                   {link.text}
                 </Link>
               ))}
@@ -84,22 +81,19 @@ export default function Header() {
               <a
                 href="https://www.facebook.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <BiLogoFacebook size={20} className="text-orange-200" />{" "}
               </a>
               <a
                 href="https://www.instagram.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <BiLogoInstagram size={20} className="text-orange-200" />{" "}
               </a>
               <a
                 href="https://www.twitter.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <BiLogoTwitter size={20} className="text-orange-200" />{" "}
               </a>
             </div>
@@ -112,8 +106,7 @@ export default function Header() {
                 key={link.id}
                 to={link.url}
                 className="text-gray-900 text-lg font-semibold hover:bg-mainBlue hover:text-orange-200 px-4 py-2 rounded transition"
-                onClick={() => window.scrollTo(0, 0)}
-              >
+                onClick={() => window.scrollTo(0, 0)}>
                 {link.text}
               </Link>
             ))}
@@ -122,8 +115,7 @@ export default function Header() {
           {/* Burger Icon for Small Screens */}
           <div
             onClick={() => setNavShow(!navShow)}
-            className="flex shadow-lg p-4 cursor-pointer md:hidden"
-          >
+            className="flex shadow-lg p-4 cursor-pointer md:hidden">
             <HiOutlineMenu className="text-gray-600 font-bold text-lg" />
           </div>
         </div>
