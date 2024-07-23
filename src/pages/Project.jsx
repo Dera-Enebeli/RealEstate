@@ -26,11 +26,11 @@ const properties = [
     location: "Lekki Phase 1",
     image: "/apt2.jpg",
     description:
-      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt.",
     bed: 3,
     size: "10x10 m",
     area: "1600 m",
-    price: "₦3,300 / per Month",
+    price: "₦3,300,000",
   },
   {
     id: 3,
