@@ -115,8 +115,8 @@ export default function Header() {
           {/* Burger Icon for Small Screens */}
           <div
             onClick={() => setNavShow(!navShow)}
-            className="flex shadow-lg p-4 cursor-pointer md:hidden">
-            <HiOutlineMenu className="text-gray-600 font-bold text-lg" />
+            className="flex shadow-xl p-4 bg-orange-100 cursor-pointer md:hidden">
+            <HiOutlineMenu className=" font-bold text-lg" />
           </div>
         </div>
       </header>

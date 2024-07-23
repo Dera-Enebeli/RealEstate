@@ -58,7 +58,7 @@ export default function Cards() {
           <div className="p-2">
             <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg">
               <img src="/icon1.png" alt="Icon 1" className="h-24 w-24 mb-4" />
-              <h2 className="text-2xl font-bold mb-4">Short-term Rentals</h2>
+              <h2 className="text-2xl font-bold mb-4 text-center">Short-term Rentals</h2>
               <p className="text-center">
                 Explore our exclusive range of residential and commercial
                 properties, designed to exceed your expectations and deliver
@@ -67,7 +67,7 @@ export default function Cards() {
             </div>
           </div>
           <div className="p-2">
-            <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg">
+            <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg bg-lightblue">
               <img src="/icon2.png" alt="Icon 2" className="h-24 w-24 mb-4" />
               <h2 className="text-2xl font-bold mb-4 text-center">
                 Long-term Stays / Yearly Rentals
@@ -92,7 +92,7 @@ export default function Cards() {
             </div>
           </div>
           <div className="p-2">
-            <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg">
+            <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg bg-lightblue">
               <img src="/icon3.png" alt="Icon 3" className="h-24 w-24 mb-4" />
               <h2 className="text-2xl font-bold mb-4 text-center">
                 Construction Services
@@ -116,7 +116,7 @@ export default function Cards() {
             </div>
           </div>
           <div className="p-2">
-            <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg bg-gray-100 ">
+            <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg bg-lightblue">
               <img src="/icon3.png" alt="Icon 3" className="h-24 w-24 mb-4" />
               <h2 className="text-2xl font-bold mb-4 text-center">
                 Property Purchase
