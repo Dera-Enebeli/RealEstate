@@ -32,9 +32,8 @@ export default function Carousel({ slides }) {
     <div
       className="overflow-hidden relative h-screen"
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(true)}
-      >
-    <div
+      onMouseLeave={() => setIsHovered(true)}>
+      <div
         className="flex transition-transform ease-out duration-400 h-full"
         style={{
           transform: `translateX(-${current * 100}%)`,
@@ -49,8 +48,6 @@ export default function Carousel({ slides }) {
           />
         ))}
       </div>
-
-
 
       <MotionConfig transition={{ duration: 0.7 }}>
         <AnimatePresence>
@@ -112,4 +109,3 @@ export default function Carousel({ slides }) {
     </div>
   );
 }
-

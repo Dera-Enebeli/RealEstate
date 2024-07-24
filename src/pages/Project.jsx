@@ -131,7 +131,7 @@ const Project = () => {
                 </div>
                 <div className="flex justify-between items-center mt-3">
                   <button className="bg-newBlue text-white px-4 py-2 rounded-md flex items-center">
-                    View Properties <BiRightArrowAlt className="ml-2" />
+                    View Properties <BiRightArrowAlt className="ml-2"/>
                   </button>
                   <span className="font-bold">{property.price}</span>
                 </div>
