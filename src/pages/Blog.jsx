@@ -3,16 +3,15 @@ import React from 'react'
 export default function Blog() {
   return (
     <div>
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
-      kjn;jwn;jen'jwn 
+              <div className="text-orange-400">From our Blog</div>
+        <div>
+          <div className="text-2xl md:text-5xl font-bold">
+            Latest News & Events
+          </div>
+          <p className="text-red-600 mt-5 text-3xl">
+            No News or Events yet....
+          </p>
+        </div>
     </div>
   )
 }
