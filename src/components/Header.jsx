@@ -40,7 +40,7 @@ export default function Header() {
           <h1 className="text-gray-600 font-semibold text-lg">
             <Link to="/">
               <img
-                src="affiliate-program-backend/public/King_logoo.png"
+                src="/King_logoo.png"
                 alt="Logo"
                 className="w-[10rem] md:w-[15rem] shrink-0"
               />
