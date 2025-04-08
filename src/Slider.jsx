@@ -3,6 +3,7 @@ import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { GoArrowRight } from "react-icons/go";
 import { GoArrowLeft } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const images = ["/main_apt1.jpg", "/main_apt2.jpg"];
 
@@ -90,30 +91,30 @@ export default function Slider() {
           </div>
 
           <section className="flex justify-center gap-4 border border-green-300 relative">
-        <div className="absolute top-0 left-0 right-0 bottom-20">
-          <div>
-            <img
-              src="/icon1.png"
-              alt=""
-              className="h-56 w-56 border border-green-300"
-            />
-          </div>
-          <div>
-            <img
-              src="/icon1.png"
-              alt=""
-              className="h-56 w-56 border border-green-300"
-            />
-          </div>
-          <div>
-            <img
-              src="/icon1.png"
-              alt=""
-              className="h-56 w-56 border border-green-300"
-            />
-          </div>
-        </div>
-      </section>
+            <div className="absolute top-0 left-0 right-0 bottom-20">
+              <div>
+                <img
+                  src="/icon1.png"
+                  alt=""
+                  className="h-56 w-56 border border-green-300"
+                />
+              </div>
+              <div>
+                <img
+                  src="/icon1.png"
+                  alt=""
+                  className="h-56 w-56 border border-green-300"
+                />
+              </div>
+              <div>
+                <img
+                  src="/icon1.png"
+                  alt=""
+                  className="h-56 w-56 border border-green-300"
+                />
+              </div>
+            </div>
+          </section>
         </div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-10 flex flex-col justify-center items-center w-[90vw] md:w-[70vw] lg:w-[30vw] bg-white opacity-90">
           <AnimatePresence>
@@ -126,13 +127,15 @@ export default function Slider() {
               {text}
             </motion.div>
           </AnimatePresence>
-          <button className="sm:text-sm bg-orange-400 p-4 text-white text-sm">
+          <Link
+            to="/Project"
+            className="sm:text-sm bg-orange-400 p-4 text-white text-sm cursor-pointer">
             PROPERTIES LISTINGS
-          </button>
+          </Link>
         </div>
       </MotionConfig>
     </main>
   );
 
-return
+  return;
 }

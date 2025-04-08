@@ -14,7 +14,7 @@ const properties = [
     location: "Banana Island Lagos",
     image: "/apt1.jpg",
     description:
-      "Lorem ipsum dolor sit amet, ad aliquip incididunt deserunt ut dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt..",
     bed: 3,
     size: "10x10 m",
     area: "1600 m",
@@ -38,7 +38,53 @@ const properties = [
     location: "Victoria Island",
     image: "/main_apt1.jpg",
     description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt.",
+    bed: 3,
+    size: "10x10 m",
+    area: "1600 m",
+    price: "₦468,000",
+    id: 1,
+    title: "Unique Villa With Private Beach",
+    location: "Banana Island Lagos",
+    image: "/apt1.jpg",
+    description:
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt..",
+    bed: 3,
+    size: "10x10 m",
+    area: "1600 m",
+    price: "₦2,490,000",
+  },
+  {
+    id: 4,
+    title: "Gorgeous Country House",
+    location: "Lekki Phase 1",
+    image: "/apt2.jpg",
+    description:
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt.",
+    bed: 3,
+    size: "10x10 m",
+    area: "1600 m",
+    price: "₦3,300,000",
+  },
+  {
+    id: 5,
+    title: "Majestic Residence in Victoria Island",
+    location: "Victoria Island",
+    image: "/main_apt1.jpg",
+    description:
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt.",
+    bed: 3,
+    size: "10x10 m",
+    area: "1600 m",
+    price: "₦468,000",
+  },
+  {
+    id: 6,
+    title: "Majestic Residence in Victoria Island",
+    location: "Victoria Island",
+    image: "/main_apt1.jpg",
+    description:
+      "Ut quis dolor tempor venum, aute eu nisl bibendum diam nonummy eu. Sed do eiusmod tempor incididunt.",
     bed: 3,
     size: "10x10 m",
     area: "1600 m",
@@ -52,7 +98,7 @@ const Project = () => {
   return (
        <div>
       {/* Navigation Bar */}
-      <div className="bg-white py-4 shadow-lg flex flex-wrap rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
+      <div className="sm:text-center bg-white py-4 shadow-lg flex flex-wrap rounded-full mx-6 lg:mx-[10rem] mt-4 mb-8 border border-orange-300">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center items-center text-center">
             <div className="nav-links flex flex-wrap justify-center space-x-6" id="navLinks">
@@ -71,11 +117,11 @@ const Project = () => {
                 className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
                 Sell
               </Link>
-              <Link
+              {/* <Link
                 to="#airbnb"
                 className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
                 Airbnb
-              </Link>
+              </Link> */}
               <Link
                 to="#shortlets"
                 className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
@@ -84,12 +130,12 @@ const Project = () => {
               <Link
                 to="#commercial"
                 className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
-                Commercial
+                Construction
               </Link>
               <Link
                 to="#vacation"
                 className="text-gray-700 hover:bg-orange-200 hover:text-white py-2 px-4 rounded-full transition-colors duration-300">
-                Vacation
+                Management
               </Link>
             </div>
           </div>

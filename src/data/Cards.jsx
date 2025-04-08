@@ -58,11 +58,17 @@ export default function Cards() {
           <div className="p-2">
             <div className="flex flex-col justify-center items-center p-8 shadow-lg rounded-lg">
               <img src="/icon1.png" alt="Icon 1" className="h-24 w-24 mb-4" />
-              <h2 className="text-2xl font-bold mb-4 text-center">Short-term Rentals</h2>
+              <h2 className="text-2xl font-bold mb-4 text-center">
+                Short-term Rentals
+              </h2>
               <p className="text-center">
-                Explore our exclusive range of residential and commercial
-                properties, designed to exceed your expectations and deliver
-                exceptional value.
+                Our short-term rental services offer flexible and convenient
+                accommodation solutions for individuals. Our fully furnished
+                properties provide the comfort and amenities of home, ensuring a
+                pleasant and hassle-free stay. Ideal for vacationers, business
+                travelers, or anyone in need of temporary housing, our
+                short-term rentals cater to diverse needs with premium locations
+                and exceptional service.
               </p>
             </div>
           </div>
@@ -73,9 +79,13 @@ export default function Cards() {
                 Long-term Stays / Yearly Rentals
               </h2>
               <p className="text-center">
-                Experience unparalleled craftsmanship and innovation with our
-                premier real estate developments, setting new standards across
-                Africa.
+                For those seeking stability and comfort, our long-term stays and
+                annual lease options provide a perfect solution. Our properties
+                are designed to be your home for a year or longer, offering
+                spacious living areas, modern amenities, and prime locations. We
+                ensure a seamless leasing process and dedicated support
+                throughout your tenancy, making it easy for you to settle in and
+                enjoy your new home.
               </p>
             </div>
           </div>
@@ -86,8 +96,13 @@ export default function Cards() {
                 Property Sales
               </h2>
               <p className="text-center">
-                Discover our flexible payment options tailored to your needs,
-                making home ownership more accessible and convenient for you.
+                Finding your dream home or the perfect investment property is
+                made easy with our property purchase services. We offer a wide
+                selection of residential and commercial properties to suit
+                various preferences and budgets. Our team of experienced real
+                estate professionals provides personalized assistance, guiding
+                you through every step of the buying process to ensure a smooth
+                and successful transaction.
               </p>
             </div>
           </div>
@@ -98,8 +113,13 @@ export default function Cards() {
                 Construction Services
               </h2>
               <p className="text-center">
-                Discover our flexible payment options tailored to your needs,
-                making home ownership more accessible and convenient for you.
+                Our construction services cater to clients looking to build
+                their dream home or commercial property from the ground up. We
+                manage every aspect of the construction process, from initial
+                design and planning to final completion. With a focus on quality
+                craftsmanship, innovative design, and timely delivery, we ensure
+                that your vision is brought to life with precision and
+                excellence.
               </p>
             </div>
           </div>
@@ -110,8 +130,13 @@ export default function Cards() {
                 Property Management
               </h2>
               <p className="text-center">
-                Discover our flexible payment options tailored to your needs,
-                making home ownership more accessible and convenient for you.
+                Our property management services are designed to take the stress
+                out of owning rental properties. We handle all aspects of
+                property management, including tenant screening, rent
+                collection, maintenance, and legal compliance. Our professional
+                team ensures that your property is well-maintained and
+                profitable, providing peace of mind and allowing you to enjoy
+                the benefits of property ownership without the hassle.
               </p>
             </div>
           </div>
@@ -122,8 +147,13 @@ export default function Cards() {
                 Property Purchase
               </h2>
               <p className="text-center">
-                Discover our flexible payment options tailored to your needs,
-                making home ownership more accessible and convenient for you.
+                Finding your dream home or the perfect investment property is
+                made easy with our property purchase services. We offer a wide
+                selection of residential and commercial properties to suit
+                various preferences and budgets. Our team of experienced real
+                estate professionals provides personalized assistance, guiding
+                you through every step of the buying process to ensure a smooth
+                and successful transaction.
               </p>
             </div>
           </div>

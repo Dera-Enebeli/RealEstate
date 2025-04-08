@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 import { HiHome } from "react-icons/hi";
 import {
   FaEnvelope,
@@ -7,8 +8,88 @@ import {
   FaUser,
   FaPencilAlt,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-export default function ContactPage() {
+export default function Contact() {
+  const navigate = useNavigate(); // Initialize navigate function
+
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent page refresh
+    const data = new FormData();
+
+    console.log("Form submit triggered");
+
+    // Append form data
+    for (const key in formData) {
+      data.append(key, formData[key]);
+    }
+
+    console.log("Sending data:", formData); // Debugging: log the data being sent
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+      
+        try {
+          const response = await fetch("http://localhost:5000/api/forms/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json", // Set JSON Content-Type
+            },
+            body: JSON.stringify(formData), // Send formData as JSON
+          });
+      
+          if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(`Error: ${response.status} - ${errorMessage}`);
+          }
+      
+          const result = await response.json();
+          console.log(result);
+      
+          // Show success alert
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Message sent successfully!",
+          }).then(() => navigate("/"));
+      
+          // Clear the form
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        } catch (error) {
+          console.error("Error:", error);
+      
+          // Show error alert
+          Swal.fire({
+            icon: "error",
+            title: "Error!",
+            text: "Error sending message. Please try again.",
+          });
+        }
+      };
+    }
+
   return (
     <>
       <section>
@@ -30,33 +111,36 @@ export default function ContactPage() {
           <div className="flex flex-col items-center p-6 border rounded-md">
             <FaEnvelope className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Email Address</h3>
-            <p className="text-gray-600 mt-2">info@12thcityrealestate.ng</p>
+            <p className="text-gray-600 mt-2"> onyidorisluxuryapartments@gmail.com</p>
           </div>
           <div className="flex flex-col items-center p-6 border rounded-md">
             <FaPhone className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Phone Number</h3>
-            <p className="text-gray-600 mt-2">+234 9164768748</p>
+            <p className="text-gray-600 mt-2">+234 (0) 8136271063</p>
           </div>
           <div className="flex flex-col items-center p-6 border rounded-md">
             <FaMapMarkerAlt className="text-4xl text-mainBlue mb-4" />
             <h3 className="text-xl font-bold">Office Address</h3>
-            <p className="text-gray-600 mt-2">
-              Unit III, Plot 204 Pius Anyim Street, Off Olusegun Obasanjo Way,
-              Wuye, Abuja FCT
+            <p className="text-gray-600 mt-2 flex items-center">
+            No 817 Edmund Medani Crescent Mabushi, Abuja.
             </p>
           </div>
         </div>
 
         <h2 className="text-3xl font-bold mb-6">Get A Quote</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <div className="flex flex-col">
               <label className="text-gray-600 mb-2">Enter your name</label>
               <div className="relative">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="border border-gray-300 p-3 rounded-md w-full"
                   placeholder="Enter your name"
+                  required
                 />
                 <span className="absolute right-3 top-3 text-mainBlue">
                   <FaUser />
@@ -68,8 +152,12 @@ export default function ContactPage() {
               <div className="relative">
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="border border-gray-300 p-3 rounded-md w-full"
                   placeholder="Enter email address"
+                  required
                 />
                 <span className="absolute right-3 top-3 text-mainBlue">
                   <FaEnvelope />
@@ -81,8 +169,12 @@ export default function ContactPage() {
               <div className="relative">
                 <input
                   type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="border border-gray-300 p-3 rounded-md w-full"
                   placeholder="Enter phone number"
+                  required
                 />
                 <span className="absolute right-3 top-3 text-mainBlue">
                   <FaPhone />
@@ -94,8 +186,12 @@ export default function ContactPage() {
             <label className="text-gray-600 mb-2">Enter message</label>
             <div className="relative">
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="border border-gray-300 p-3 rounded-md w-full h-32"
-                placeholder="Enter message"></textarea>
+                placeholder="Enter message"
+                required></textarea>
               <span className="absolute right-3 top-3 text-mainBlue">
                 <FaPencilAlt />
               </span>
@@ -109,20 +205,6 @@ export default function ContactPage() {
             </button>
           </div>
         </form>
-      </div>
-
-      <div className="mt-10 p-8 bg-gray-100">
-        <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.704656871601!2d7.455782714866244!3d9.04726279351545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0948df57e0c7%3A0x34898b9b3b2de67!2sOlusegun%20Obasanjo%20Way%2C%20Wuye%2C%20Abuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1688427026142!5m2!1sen!2sng"
-          width="100%"
-          height="450"
-          style={{ border: 0, borderRadius: '10px' }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="shadow-lg"
-        ></iframe>
       </div>
     </>
   );

@@ -17,17 +17,17 @@ export default function Home() {
 
           <div className="flex items-center justify-center text-center gap-1 md:justify-start">
             <HiOutlineMail size={17} className="text-orange-200 shrink-0" />
-            <p className="text-sm font-bold text-white">support@HalveGain.com</p>
+            <p className="text-sm font-bold text-white">onyidorisluxuryapartments@gmail.com</p>
           </div>
 
           <div className="flex items-center justify-center text-center gap-1 md:justify-start">
             <BiMapPin size={17} className="text-orange-200 shrink-0 " />
-            <p className="text-sm font-bold text-white">1101 Oakview DR Greenville NC 27858-5228 USA</p>
+            <p className="text-sm font-bold text-white">No 817 Edmund Medani Crescent Mabushi, Abuja.</p>
           </div>
 
         </div>
 
-        <div className="flex justify-center text-center items-center md:flex-end gap-4 pt-2">
+        {/* <div className="flex justify-center text-center items-center md:flex-end gap-4 pt-2">
             <div>{
                     <BiLogoFacebook
                         size={20}
@@ -46,7 +46,32 @@ export default function Home() {
                         className="text-orange-200"
                     />
                 }</div>
-        </div>
+        </div> */}
+
+
+          <div className="flex space-x-4 p-4 mt-auto">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoFacebook size={20} className="text-orange-200" />
+              </a>
+              <a
+                href="https://www.instagram.com/onyidoris_luxury_apartments?igsh=MTNxMnhucWE1dGd2MA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoInstagram size={20} className="text-orange-200" />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoTwitter size={20} className="text-orange-200" />
+              </a>
+            </div>
       </section>
 
 

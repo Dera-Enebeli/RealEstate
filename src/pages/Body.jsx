@@ -15,6 +15,9 @@ import Cards from "../data/Cards";
 // import 'slick-carousel/slick/slick.css'
 // import 'slick-carousel/slick/slick.css'
 
+import { BiLogoWhatsapp } from "react-icons/bi";
+import { SiGmail } from "react-icons/si";
+
 export default function Body() {
   return (
     <div>
@@ -44,119 +47,131 @@ export default function Body() {
       </div>
 
       <section className="relative bg-newBlue p-6 h-auto mb-[5rem]">
-      <div className="flex flex-col md:px-[11.5rem] pb-[2rem] pt-[3rem]">
-        <h1 className="text-orange-400">----- POPULAR</h1>
+        <div className="flex flex-col md:px-[11.5rem] pb-[2rem] pt-[3rem]">
+          <h1 className="text-orange-400">----- POPULAR</h1>
 
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-end">
-          <h1 className="text-white pt-5 font-bold text-3xl md:text-4xl lg:text-5xl">
-            Our Popular Homes
-          </h1>
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end">
+            <h1 className="text-white pt-5 font-bold text-3xl md:text-4xl lg:text-5xl">
+              Our Popular Homes
+            </h1>
 
-          <div className="flex items-center p-2 gap-2 text-lg mt-4 md:mt-0">
-            <h1 className="text-white">Explore All</h1>
-            <FaArrowRightLong className="font-bold text-white" />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-[1rem] mx-4 md:mx-[6rem] lg:mx-[12rem] justify-center">
-        <div className="bg-white shadow-lg rounded-md w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
-          <img src="/apt1.jpg" alt="" className="h-[17rem] w-full object-cover" />
-          <div className="p-4">
-            <div className="flex items-center">
-              <HiLocationMarker />
-              <h1 className="p-2 pl-4 pb-3 font-bold">Banana Island Lagos</h1>
-            </div>
-
-            <div className="flex justify-between gap-6">
-              <div className="flex justify-center items-center">
-                <IoBedOutline className="text-newBlue" />
-                <h1 className=" text-sm font-semibold" >4 Bed</h1>
-              </div>
-              <div className="flex justify-center items-center">
-                <BiRuler />
-                <h1 className=" text-sm font-semibold" >10x10 m</h1>
-              </div>
-              <div className="flex justify-center items-center">
-                <GoGraph />
-                <h1 className=" text-sm font-semibold" >1600 m</h1>
-              </div>
-            </div>
-
-            <div className="flex justify-between mt-3 items-center">
-              <h1 className="text-white p-2 pl-4 pb-3 flex items-center bg-newBlue rounded-md">
-                View Properties <BiRightArrowAlt />
-              </h1>
-              <button className="font-bold">&#8358;100,000</button>
-            </div>
+            {/* <div className="flex items-center p-2 gap-2 text-lg mt-4 md:mt-0">
+              <h1 className="text-white">Explore All</h1>
+              <FaArrowRightLong className="font-bold text-white" />
+            </div> */}
           </div>
         </div>
 
-        <div className="bg-white shadow-lg rounded-md w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
-          <img src="/apt1.jpg" alt="" className="h-[17rem] w-full object-cover" />
-          <div className="p-4">
-            <div className="flex items-center">
-              <HiLocationMarker />
-              <h1 className="p-2 pl-4 pb-3 font-bold">Banana Island Lagos</h1>
-            </div>
+        <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-[1rem] mx-4 md:mx-[6rem] lg:mx-[12rem] justify-center">
+          <div className="bg-white shadow-lg rounded-md w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
+            <img
+              src="/apt1.jpg"
+              alt=""
+              className="h-[17rem] w-full object-cover"
+            />
+            <div className="p-4">
+              <div className="flex items-center">
+                <HiLocationMarker />
+                <h1 className="p-2 pl-4 pb-3 font-bold">Asokoro - Abuja</h1>
+              </div>
 
-            <div className="flex justify-between gap-6">
-              <div className="flex justify-center items-center">
-                <IoBedOutline className="text-newBlue" />
-                <h1>4 Bed</h1>
+              <div className="flex justify-between gap-6">
+                <div className="flex justify-center items-center">
+                  <IoBedOutline className="text-newBlue" />
+                  <h1 className=" text-sm font-semibold">4 Bed</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <BiRuler />
+                  <h1 className=" text-sm font-semibold">10x10 m</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <GoGraph />
+                  <h1 className=" text-sm font-semibold">1600 m</h1>
+                </div>
               </div>
-              <div className="flex justify-center items-center">
-                <BiRuler />
-                <h1>10x10 m</h1>
-              </div>
-              <div className="flex justify-center items-center">
-                <GoGraph />
-                <h1>1600 m</h1>
+
+              <div className="flex justify-between mt-3 items-center">
+                <h1 className="text-white p-2 pl-4 pb-3 flex items-center bg-newBlue rounded-md">
+                  View Properties <BiRightArrowAlt />
+                </h1>
+                <button className="font-bold">&#8358;100,000</button>
               </div>
             </div>
+          </div>
 
-            <div className="flex justify-between mt-3 items-center">
-              <h1 className="text-white p-2 pl-4 pb-3 flex items-center bg-newBlue rounded-md">
-                View Properties <BiRightArrowAlt />
-              </h1>
-              <button className="font-bold">&#8358;100,000</button>
+          <div className="bg-white shadow-lg rounded-md w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
+            <img
+              src="/apt1.jpg"
+              alt=""
+              className="h-[17rem] w-full object-cover"
+            />
+            <div className="p-4">
+              <div className="flex items-center">
+                <HiLocationMarker />
+                <h1 className="p-2 pl-4 pb-3 font-bold">Wuse 2 - Abuja</h1>
+              </div>
+
+              <div className="flex justify-between gap-6">
+                <div className="flex justify-center items-center">
+                  <IoBedOutline className="text-newBlue" />
+                  <h1>4 Bed</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <BiRuler />
+                  <h1>10x10 m</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <GoGraph />
+                  <h1>1600 m</h1>
+                </div>
+              </div>
+
+              <div className="flex justify-between mt-3 items-center">
+                <h1 className="text-white p-2 pl-4 pb-3 flex items-center bg-newBlue rounded-md">
+                  View Properties <BiRightArrowAlt />
+                </h1>
+                <button className="font-bold">&#8358;100,000</button>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-lg rounded-md w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
+            <img
+              src="/apt1.jpg"
+              alt=""
+              className="h-[17rem] w-full object-cover"
+            />
+            <div className="p-4">
+              <div className="flex items-center">
+                <HiLocationMarker />
+                <h1 className="p-2 pl-4 pb-3 font-bold">Maitama - Abuja</h1>
+              </div>
+
+              <div className="flex justify-between gap-6">
+                <div className="flex justify-center items-center">
+                  <IoBedOutline className="text-newBlue" />
+                  <h1>4 Bed</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <BiRuler />
+                  <h1>10x10 m</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <GoGraph />
+                  <h1>1600 m</h1>
+                </div>
+              </div>
+
+              <div className="flex justify-between mt-3 items-center">
+                <h1 className="text-white p-2 pl-4 pb-3 flex items-center bg-newBlue rounded-md">
+                  View Properties <BiRightArrowAlt />
+                </h1>
+                <button className="font-bold">&#8358;100,000</button>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="bg-white shadow-lg rounded-md w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
-          <img src="/apt1.jpg" alt="" className="h-[17rem] w-full object-cover" />
-          <div className="p-4">
-            <div className="flex items-center">
-              <HiLocationMarker />
-              <h1 className="p-2 pl-4 pb-3 font-bold">Banana Island Lagos</h1>
-            </div>
-
-            <div className="flex justify-between gap-6">
-              <div className="flex justify-center items-center">
-                <IoBedOutline className="text-newBlue" />
-                <h1>4 Bed</h1>
-              </div>
-              <div className="flex justify-center items-center">
-                <BiRuler />
-                <h1>10x10 m</h1>
-              </div>
-              <div className="flex justify-center items-center">
-                <GoGraph />
-                <h1>1600 m</h1>
-              </div>
-            </div>
-
-            <div className="flex justify-between mt-3 items-center">
-              <h1 className="text-white p-2 pl-4 pb-3 flex items-center bg-newBlue rounded-md">
-                View Properties <BiRightArrowAlt />
-              </h1>
-              <button className="font-bold">&#8358;100,000</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
       <section className="flex text-gray-900 font-semibold justify-center">
         <div>
@@ -180,34 +195,38 @@ export default function Body() {
         <div className="flex-grow p-4 sm:p-8 md:p-12 lg:p-16">
           <p className="text-lg font-semibold pb-3">Luxury Apartment</p>
           <h1 className="text-2xl md:text-3xl font-bold mb-4">
-            Comfort is our <br /> Top Priority for you.
+            Where Elegance Meets Comfort
+            {/* Where Elegance <br />  Meets Comfort. */}
           </h1>
           <p className="text-gray-700 pb-6">
-            12th City is one of Africa’s most respected names in real estate
-            development and is recognized as a premier developer of Class A
-            residential and commercial properties throughout the continent.
-            legacy.
+            At Onyidoris Luxury Apartments & Suites, your comfort is our top
+            priority. As one of Africa’s most esteemed names in real estate
+            development, we take pride in crafting exceptional Class A
+            residential and commercial properties that redefine luxury living.
+            More than just homes, we create timeless legacies—designed for
+            sophistication, built for generations.
           </p>
 
           <div className="flex flex-col md:flex-row gap-4">
             <ul className="list-disc pl-5">
-              <li className="p-1">Lorem ipsum dolor sit amet.</li>
-              <li className="p-1">Lorem ipsum dolor sit amet.</li>
+              <li className="p-1">Locatio conductio rei.</li>
+              <li className="p-1">praedium urbanum.</li>
             </ul>
             <ul className="list-disc pl-5">
-              <li className="p-1">Lorem ipsum dolor sit amet.</li>
-              <li className="p-1">Lorem ipsum dolor sit amet.</li>
+              <li className="p-1">Usufructus.</li>
+              <li className="p-1">Emptio-Venditio.</li>
             </ul>
           </div>
 
           <div className="bg-orange-100 mt-6 p-4 border-l-4 border-newBlue">
             <p>
-              "The magic thing about home is that it feels good to leave, and it
-              feels even better to come back."
+              "The true magic of home lies in the journey—it calls you to
+              explore the world, but its greatest power is in drawing you back,
+              where your heart finds its deepest comfort."
             </p>
           </div>
 
-          <button className="bg-newBlue text-white p-4 rounded-sm mt-6">
+          <button className="bg-newBlue rounded-md text-white p-4 mt-6">
             Book Now
           </button>
         </div>
@@ -219,15 +238,30 @@ export default function Body() {
           <div className="flex flex-col justify-center items-center absolute inset-0 p-4">
             <p className="pb-6 text-orange-200">// Have any enquiries? //</p>
             <h1 className="text-xl md:text-6xl font-bold text-white">
-              +234 911-543-4458
+              +234 813-627-1063{" "}
             </h1>
             <div className="mt-10 text-white flex gap-10">
-              <button className="text-sm bg-orange-300 p-4 semibold-bold md:text-lg">
-                <h1>send a mail</h1>
-              </button>
-              <button className="text-sm bg-orange-300 p-4 semibold-bold md:text-lg">
-                <h1>chat via whatsapp</h1>
-              </button>
+           
+              <a
+                href="https://wa.me/2348136271063" // replace with your WhatsApp number
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoWhatsapp
+                  size={50}
+                  className="text-orange-200 hover:text-green-500 transition-colors duration-300"
+                />
+              </a>
+
+
+              <a
+                href="mailto:onyidorisluxuryapartments@gmail.com" // replace with your email
+                className="cursor-pointer">
+                <SiGmail
+                  size={50}
+                  className="text-orange-200 hover:text-red-400 transition-colors duration-300"
+                />
+              </a>
             </div>
           </div>
         </div>

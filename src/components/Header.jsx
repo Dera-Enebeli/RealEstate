@@ -40,7 +40,7 @@ export default function Header() {
           <h1 className="text-gray-600 font-semibold text-lg">
             <Link to="/">
               <img
-                src="/best_logo.png"
+                src="affiliate-program-backend/public/King_logoo.png"
                 alt="Logo"
                 className="w-[10rem] md:w-[15rem] shrink-0"
               />
@@ -54,7 +54,7 @@ export default function Header() {
             } md:hidden`}>
             <div className="flex justify-between items-center p-4 border-b">
               <img
-                src="/best_logo.png"
+                src="affiliate-program-backend/public/King_logoo.png"
                 alt="Logo"
                 className="w-[8rem] sm:w-[10rem]"
               />
@@ -77,26 +77,30 @@ export default function Header() {
                 </Link>
               ))}
             </div>
-            <div className="flex space-x-4 p-4 border-t mt-auto">
+
+            {/* <div className="flex space-x-4 p-4 border-t mt-auto border border-red-700">
               <a
                 href="https://www.facebook.com"
                 target="_blank"
-                rel="noopener noreferrer">
-                <BiLogoFacebook size={20} className="text-orange-200" />{" "}
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoFacebook size={20} className="text-orange-200" />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/onyidoris_luxury_apartments?igsh=MTNxMnhucWE1dGd2MA=="
                 target="_blank"
-                rel="noopener noreferrer">
-                <BiLogoInstagram size={20} className="text-orange-200" />{" "}
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoInstagram size={20} className="text-orange-200" />
               </a>
               <a
                 href="https://www.twitter.com"
                 target="_blank"
-                rel="noopener noreferrer">
-                <BiLogoTwitter size={20} className="text-orange-200" />{" "}
+                rel="noopener noreferrer"
+                className="cursor-pointer">
+                <BiLogoTwitter size={20} className="text-orange-200" />
               </a>
-            </div>
+            </div> */}
           </nav>
 
           {/* Horizontal Navigation for Large Screens */}

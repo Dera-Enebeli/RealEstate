@@ -54,22 +54,25 @@ export default function About() {
           </p>
           <div className="bg-red-50 mt-[2rem] p-4 border-l-[0.4rem] border-orange-200">
             <p>
-              "The magic thing about home is that it feels good to leave, and it
-              feels even better to come back."
+              "The true magic of home lies in the journey—it calls you to
+              explore the world, but its greatest power is in drawing you back,
+              where your heart finds its deepest comfort."
             </p>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-wrap bg-black text-white justify-around p-[2rem] md:p-[5rem] lg:p-[10rem] gap-6">
+      <section className="flex flex-wrap bg-gray-700 text-white justify-around p-[2rem] md:p-[5rem] lg:p-[10rem] gap-6">
         <div className="border border-gray-600 text-center p-6 h-auto w-full md:w-[20rem]">
           <div className="flex items-center justify-center mb-4">
             <HiMiniHomeModern size={55} />
             <h1 className="font-bold text-2xl p-4">Our Mission</h1>
           </div>
           <p>
-            To enrich the lives we touch by building wealth and creating
-            comfort.
+            "To empower every client with unparalleled expertise, long-lasting
+            relationships, innovative solutions, and a personalized approach,
+            ensuring a seamless journey from dream to reality in the real estate
+            market, with integrity and professionalism."
           </p>
         </div>
 
@@ -98,9 +101,11 @@ export default function About() {
             <h1 className="font-bold text-2xl p-4">Our Vision</h1>
           </div>
           <p>
-            We envision being the partner of choice to those who believe that
-            smart, comfortable, and thoughtful Real estate development changes
-            cities for the better.
+            "To be the leading real estate company renowned for transforming the
+            industry through exceptional service, cutting-edge technology, and
+            sustainable practices, while driving scalability and innovation in
+            the market and creating vibrant communities where dreams thrive and
+            investments flourish."
           </p>
         </div>
       </section>
