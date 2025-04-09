@@ -54,7 +54,7 @@ export default function Header() {
             } md:hidden`}>
             <div className="flex justify-between items-center p-4 border-b">
               <img
-                src="affiliate-program-backend/public/King_logoo.png"
+                src="/King_logoo.png"
                 alt="Logo"
                 className="w-[8rem] sm:w-[10rem]"
               />

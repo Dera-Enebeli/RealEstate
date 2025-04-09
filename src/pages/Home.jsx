@@ -49,7 +49,7 @@ export default function Home() {
         </div> */}
 
 
-          <div className="flex space-x-4 p-4 mt-auto">
+          <div className="flex justify-center text-center items-center md:flex-end gap-4 pt-2">
               <a
                 href="https://www.facebook.com"
                 target="_blank"

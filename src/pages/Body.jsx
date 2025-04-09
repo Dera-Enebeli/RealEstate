@@ -193,7 +193,7 @@ export default function Body() {
         </div>
 
         <div className="flex-grow p-4 sm:p-8 md:p-12 lg:p-16">
-          <p className="text-lg font-semibold pb-3">Luxury Apartment</p>
+          <p className="text-lg font-semibold pb-3">Luxury Living</p>
           <h1 className="text-2xl md:text-3xl font-bold mb-4">
             Where Elegance Meets Comfort
             {/* Where Elegance <br />  Meets Comfort. */}

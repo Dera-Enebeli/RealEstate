@@ -1,79 +1,73 @@
 import express from 'express';
-import bodyParser from 'body-parser'; // To parse form data
+import bodyParser from 'body-parser';
 import upload from './middlewares/multerConfig.js';
+import nodemailer from 'nodemailer';
 
 const router = express.Router();
 
-// Middleware to parse JSON and form data
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
-
-// POST route for handling contact form submissions
-router.post('/contact', upload.none(), (req, res) => {
-  const { name, email, phone, message } = req.body;
-
-  console.log('Received contact form data:', { name, email, phone, message });
-
-
-  // Basic validation: Check if all required fields are filled
-  if (!name || !email || !phone || !message) {
-    return res.status(400).send({
-      message: "Please fill all the fields!",
-    });
+// 📩 Setup Nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'onyidorisluxuryapartments@gmail.com', // replace with your Gmail
+    pass: 'hfne fexl uulp agxe'      // generate this from https://myaccount.google.com/apppasswords
   }
-  
-  // Normally, you'd store form data in a database or perform other actions here
-  console.log('Received contact form data:', { name, email, phone, message });
-
-  // Send success response
-  res.status(200).send({
-    message: "Contact form submitted successfully!",
-    data: { name, email, phone, message },
-  });
 });
 
-// Existing form submission route (rename if needed to avoid confusion)
-router.post('/submitForm', (req, res) => {
-  const { name, email, phone, message } = req.body;
-
-  // Basic validation: Check if all required fields are filled
-  if (!name || !email || !phone || !message) {
-    return res.status(400).send({
-      message: "Please fill all the fields!",
-    });
-  }
-  
-  // Normally, you'd store form data in a database or perform other actions here
-  console.log('Received form data:', { name, email, phone, message });
-
-  // Send success response
-  res.status(200).send({
-    message: "Form submitted successfully!",
-    data: { name, email, phone, message },
-  });
-});
-
-// POST route for handling file uploads
-router.post('/upload', upload.single('cv'), (req, res) => {
+// 📬 Route to handle form + file upload and send email
+router.post('/upload', upload.single('cv'), async (req, res) => {
   try {
-    if (req.file === undefined) {
-      return res.status(400).send({
-        message: "No file selected!",
-      });
+    const { name, email, phone, address, dob, qualification, experience, message } = req.body;
+    const cv = req.file;
+
+    if (!name || !email || !phone || !address || !dob || !qualification || !experience || !message) {
+      return res.status(400).send({ message: "Please fill all the fields!" });
     }
+
+    if (!cv) {
+      return res.status(400).send({ message: "No file selected!" });
+    }
+
+    // Compose email
+    const mailOptions = {
+      from: `"Affiliate Form" <${email}>`,
+      to: 'onyidorisluxuryapartments@gmail.com',
+      subject: `New Affiliate Submission - ${name}`,
+      html: `
+        <h3>New Affiliate Application Received</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>Date of Birth:</strong> ${dob}</p>
+        <p><strong>Qualification:</strong> ${qualification}</p>
+        <p><strong>Experience:</strong> ${experience}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
+      attachments: [
+        {
+          filename: cv.originalname,
+          content: cv.buffer
+        }
+      ]
+    };
+
+    await transporter.sendMail(mailOptions);
+
     res.status(200).send({
-      message: "File uploaded successfully!",
-      file: req.file,
+      message: "Form submitted and email sent successfully!",
     });
-  } catch (err) {
+
+  } catch (error) {
+    console.error("Email error:", error);
     res.status(500).send({
-      message: "Error uploading file",
-      error: err.message || "An unknown error occurred.",
+      message: "Error processing request",
+      error: error.message || "Something went wrong."
     });
   }
-  console.log(req.body); // Check if data is received
-  console.log(req.file); // If using multer for file uploads
 });
 
 export default router;
