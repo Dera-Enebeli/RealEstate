@@ -17,6 +17,8 @@ import Cards from "../data/Cards";
 
 import { BiLogoWhatsapp } from "react-icons/bi";
 import { SiGmail } from "react-icons/si";
+import { Link } from "react-router-dom";
+
 
 export default function Body() {
   return (
@@ -210,7 +212,7 @@ export default function Body() {
           <div className="flex flex-col md:flex-row gap-4">
             <ul className="list-disc pl-5">
               <li className="p-1">Locatio conductio rei.</li>
-              <li className="p-1">praedium urbanum.</li>
+              <li className="p-1">Praedium urbanum.</li>
             </ul>
             <ul className="list-disc pl-5">
               <li className="p-1">Usufructus.</li>
@@ -226,9 +228,11 @@ export default function Body() {
             </p>
           </div>
 
-          <button className="bg-newBlue rounded-md text-white p-4 mt-6">
-            Book Now
-          </button>
+          <Link to="/project">
+            <button className="bg-newBlue rounded-md text-white p-4 mt-6">
+              Book Now
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -241,9 +245,8 @@ export default function Body() {
               +234 813-627-1063{" "}
             </h1>
             <div className="mt-10 text-white flex gap-10">
-           
               <a
-                href="https://wa.me/2348136271063" // replace with your WhatsApp number
+                href="https://wa.me/2348136271063"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer">
@@ -252,7 +255,6 @@ export default function Body() {
                   className="text-orange-200 hover:text-green-500 transition-colors duration-300"
                 />
               </a>
-
 
               <a
                 href="mailto:onyidorisluxuryapartments@gmail.com" // replace with your email
