@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 export default function Body() {
   const homes = [
     { id: 1, image: "/apt1.jpg", location: "Asokoro - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
-    { id: 2, image: "/apt1.jpg", location: "Wuse 2 - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
-    { id: 3, image: "/apt1.jpg", location: "Maitama - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
+    { id: 2, image: "/apt2.jpg", location: "Wuse 2 - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
+    { id: 3, image: "main_apt4.jpg", location: "Maitama - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
   ];
 
   return (
