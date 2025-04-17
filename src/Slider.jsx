@@ -1,141 +1,107 @@
 import React, { useState } from "react";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import { GoArrowRight } from "react-icons/go";
-import { GoArrowLeft } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
-const images = ["/main_apt1.jpg", "/main_apt2.jpg"];
+const images = [
+  "/main_apt1.jpg",
+  "/main_apt2.jpg",
+];
+const captions = [
+  "Invest In the Future of Real Estate",
+  "Experience Modern Luxury Living",
+];
 
 export default function Slider() {
   const [current, setCurrent] = useState(0);
-  const [isFocus, setIsFocus] = useState(false);
-  const [text, setText] = useState("Invest In The Future Of Real Estate");
+  const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
 
-  const onPrevClick = () => {
-    if (current > 0) {
-      setText("Invest In The Future Of Real Estate");
-      setCurrent(current - 1);
-    }
-  };
-
-  const onNextClick = () => {
-    if (current < images.length - 1) {
-      setCurrent(current + 1);
-      setText("Our Modern Living Quarters");
-    }
-  };
+  const prev = () => current > 0 && setCurrent(current - 1);
+  const next = () => current < images.length - 1 && setCurrent(current + 1);
 
   return (
-    <main className="flex relative flex-col items-center justify-between">
-      <MotionConfig transition={{ duration: 0.7 }}>
-        <div className="flex items-center">
-          <AnimatePresence>
-            {isFocus && (
-              <motion.div
-                className="absolute left-2 right-2 flex justify-between z-10"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onHoverStart={() => setIsFocus(true)}
-                onHoverEnd={() => setIsFocus(false)}>
-                <motion.button
-                  onClick={onPrevClick}
-                  whileHover={{
-                    backgroundColor: "rgba(254, 215, 170)",
-                    transition: { duration: 0.7, ease: [0.32, 0.72, 0, 1] },
-                  }}
-                  className="h-[3rem] w-[3rem] border z-50 border-orange-200 m-4 p-2 shrink-0 hover:text-white">
-                  <GoArrowLeft size={25} />
-                </motion.button>
+    <div
+      className="relative w-full overflow-hidden"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <MotionConfig transition={{ duration: 0.8, ease: "easeInOut" }}>
+        {/* Image Carousel */}
+        <motion.div
+          className="flex transition-transform"
+          animate={{ x: `-${current * 100}%` }}
+        >
+          {images.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`slide-${i}`}
+              className="object-cover md:w-full h-[40rem] lg:aspect-[20/8]"
+            />
+          ))}
+        </motion.div>
 
-                <motion.button
-                  onClick={onNextClick}
-                  whileHover={{
-                    backgroundColor: "rgba(254, 215, 170)",
-                    transition: { duration: 0.7, ease: [0.32, 0.72, 0, 1] },
-                  }}
-                  className="h-[3rem] w-[3rem] z-50 border border-orange-200 m-4 p-2 shrink-0 hover:text-white">
-                  <GoArrowRight size={25} />
-                </motion.button>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          <motion.div
-            className="flex gap-4 flex-nowrap"
-            animate={{ x: `calc(-${current * 100}% - ${current}rem)` }}
-            onHoverStart={() => setIsFocus(true)}
-            onHoverEnd={() => setIsFocus(false)}>
-            {images.map((image, id) => (
-              <img
-                key={id}
-                src={image}
-                alt={image}
-                className="object-cover md:w-full h-[40rem] lg:aspect-[20/8]"
-              />
-            ))}
-          </motion.div>
-
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10">
-            <div className="flex gap-3 px-3 py-2 rounded-full opacity-80">
-              {[...images].map((_, id) => (
-                <button key={id} onClick={() => setCurrent(id)}>
-                  <div
-                    className={`w-3 h-3 rounded-full ${
-                      id === current ? "bg-orange-200" : "bg-black"
-                    }`}></div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <section className="flex justify-center gap-4 border border-green-300 relative">
-            <div className="absolute top-0 left-0 right-0 bottom-20">
-              <div>
-                <img
-                  src="/icon1.png"
-                  alt=""
-                  className="h-56 w-56 border border-green-300"
-                />
-              </div>
-              <div>
-                <img
-                  src="/icon1.png"
-                  alt=""
-                  className="h-56 w-56 border border-green-300"
-                />
-              </div>
-              <div>
-                <img
-                  src="/icon1.png"
-                  alt=""
-                  className="h-56 w-56 border border-green-300"
-                />
-              </div>
-            </div>
-          </section>
-        </div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-10 flex flex-col justify-center items-center w-[90vw] md:w-[70vw] lg:w-[30vw] bg-white opacity-90">
-          <AnimatePresence>
+        {/* Navigation Arrows */}
+        <AnimatePresence>
+          {hovered && (
             <motion.div
-              key={text}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="text-center font-bold p-4 text-newBlue text-2xl md:text-2xl lg:text-3xl">
-              {text}
+              className="absolute inset-0 flex justify-between items-center px-8 z-20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <button
+                onClick={prev}
+                className="p-3 bg-white/80 backdrop-blur-sm rounded-full hover:bg-orange-300 transition-shadow shadow-lg"
+              >
+                <GoArrowLeft size={28} className="text-newBlue" />
+              </button>
+              <button
+                onClick={next}
+                className="p-3 bg-white/80 backdrop-blur-sm rounded-full hover:bg-orange-300 transition-shadow shadow-lg"
+              >
+                <GoArrowRight size={28} className="text-newBlue" />
+              </button>
             </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-1 h-2 rounded-full transition-all duration-300 ${
+                i === current ? 'bg-orange-400 scale-125' : 'bg-white/80'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Clickable Caption Overlay */}
+        <div
+          onClick={() => navigate('/project')}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 w-[85vw] md:w-[60vw] lg:w-[30vw] bg-white/70 backdrop-blur-md p-6 rounded-xl shadow-2xl cursor-pointer hover:bg-white/90 transition-all duration-300"
+        >
+          <AnimatePresence>
+            <motion.h2
+              key={captions[current]}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.6 }}
+              className="text-center text-newBlue font-bold text-xl md:text-2xl mb-4"
+            >
+              {captions[current]}
+            </motion.h2>
           </AnimatePresence>
-          <Link
-            to="/Project"
-            className="sm:text-sm bg-orange-400 p-4 text-white text-sm cursor-pointer">
-            PROPERTIES LISTINGS
-          </Link>
+          <div className="mx-auto w-max bg-gradient-to-r from-orange-300 to-orange-400 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-orange-500 hover:to-orange-700 transition-colors">
+            Explore Properties
+          </div>
         </div>
       </MotionConfig>
-    </main>
+    </div>
   );
-
-  return;
 }

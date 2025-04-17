@@ -44,51 +44,54 @@ export default function Contact() {
 
     console.log("Sending data:", formData); // Debugging: log the data being sent
     const handleSubmit = async (e) => {
-        e.preventDefault();
-      
-        try {
-          const response = await fetch("http://localhost:5000/api/forms/contact", {
+      e.preventDefault();
+
+      try {
+        const response = await fetch(
+          "http://localhost:5000/api/forms/contact",
+          {
             method: "POST",
             headers: {
               "Content-Type": "application/json", // Set JSON Content-Type
             },
             body: JSON.stringify(formData), // Send formData as JSON
-          });
-      
-          if (!response.ok) {
-            const errorMessage = await response.text();
-            throw new Error(`Error: ${response.status} - ${errorMessage}`);
           }
-      
-          const result = await response.json();
-          console.log(result);
-      
-          // Show success alert
-          Swal.fire({
-            icon: "success",
-            title: "Success!",
-            text: "Message sent successfully!",
-          }).then(() => navigate("/"));
-      
-          // Clear the form
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-        } catch (error) {
-          console.error("Error:", error);
-      
-          // Show error alert
-          Swal.fire({
-            icon: "error",
-            title: "Error!",
-            text: "Error sending message. Please try again.",
-          });
+        );
+
+        if (!response.ok) {
+          const errorMessage = await response.text();
+          throw new Error(`Error: ${response.status} - ${errorMessage}`);
         }
-      };
-    }
+
+        const result = await response.json();
+        console.log(result);
+
+        // Show success alert
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Message sent successfully!",
+        }).then(() => navigate("/"));
+
+        // Clear the form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } catch (error) {
+        console.error("Error:", error);
+
+        // Show error alert
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Error sending message. Please try again.",
+        });
+      }
+    };
+  };
 
   return (
     <>
@@ -109,45 +112,46 @@ export default function Contact() {
       {/* p-8 bg-white shadow-lg max-w-7xl mx-auto mt-10 rounded-md */}
 
       <div className="p-8 bg-white shadow-lg max-w-7xl mx-auto mt-10 rounded-md">
-      <div className="p-8 bg-white max-w-7xl mx-auto mt-10 rounded-md">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-    {/* Email */}
-    <div className="flex flex-col items-center p-6 shadow-lg border rounded-md">
-      <FaEnvelope className="text-4xl text-mainBlue mb-4" />
-      <h3 className="text-xl font-bold">Email Address</h3>
-      <a
-        href="mailto:onyidorisluxuryapartments@gmail.com"
-        className="text-gray-600 mt-2 hover:underline"
-      >
-        onyidorisluxuryapartments@gmail.com
-      </a>
-    </div>
+        <div className="p-8 bg-white max-w-7xl mx-auto mt-10 rounded-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {/* Email */}
+            <a
+              href="mailto:onyidorisluxuryapartments@gmail.com"
+              className="text-gray-600 mt-2">
+              <div className="flex flex-col items-center p-6 border rounded-md cursor-pointe hover:bg-orange-300 hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
+                <FaPhone className="text-4xl text-mainBlue mb-4" />
+                <h3 className="text-xl font-bold">Email</h3>
+                <p className="text-gray-600 mt-2">
+                  onyidorisluxuryapartments@gmail.com
+                </p>
+              </div>
+            </a>
 
-    {/* Phone (WhatsApp) */}
-    <div className="flex flex-col items-center p-6 border shadow-lg rounded-md">
-      <FaPhone className="text-4xl text-mainBlue mb-4" />
-      <h3 className="text-xl font-bold">Phone Number</h3>
-      <a
-        href="https://wa.me/2348136271063"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-600 mt-2 hover:underline"
-      >
-        +234 (0) 8136271063
-      </a>
-    </div>
+            {/* Phone (WhatsApp) */}
+            <a
+              href="https://wa.me/2348136271063"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block">
+              <div className="flex flex-col items-center p-6 border rounded-md cursor-pointer bg-orange-200 hover:bg-orange-300 hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
+                <FaPhone className="text-4xl text-mainBlue mb-4" />
+                <h3 className="text-xl font-bold">Phone Number</h3>
+                <p className="text-gray-600 mt-2">
+                  +234 (0) 8136271063
+                </p>
+              </div>
+            </a>
 
-    {/* Address */}
-    <div className="flex flex-col items-center p-6 border shadow-lg rounded-md">
-      <FaMapMarkerAlt className="text-4xl text-mainBlue mb-4" />
-      <h3 className="text-xl font-bold">Office Address</h3>
-      <p className="text-gray-600 mt-2 text-center">
-        No 817 Edmund Medani Crescent Mabushi, Abuja.
-      </p>
-    </div>
-  </div>
-</div>
-
+            {/* Address */}
+            <div className="flex flex-col items-center p-6 border rounded-md cursor-pointer hover:bg-orange-300 hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
+              <FaMapMarkerAlt className="text-4xl text-mainBlue mb-4" />
+              <h3 className="text-xl font-bold">Office Address</h3>
+              <p className="text-gray-600 mt-2 text-center">
+                No 817 Edmund Medani Crescent Mabushi, Abuja.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <h2 className="text-3xl font-bold mb-6">Get A Quote</h2>
         <form onSubmit={handleSubmit}>

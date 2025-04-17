@@ -20,7 +20,7 @@ export default function About() {
         </div>
       </div>
 
-      <section className="flex flex-col sm:px-[5rem] md:py-[5rem] md:px-[10rem] gap-6 items-center lg:flex-row">
+      <section className="flex flex-col sm:px-[5rem] md:py-[5rem] md:px-[10rem] gap-6 items-center lg:flex-row ">
         <div className="flex-none">
           <img
             src="/main_apt4.jpg"
@@ -29,7 +29,7 @@ export default function About() {
           />
         </div>
 
-        <div className="flex-grow p-[5rem]">
+        <div className="flex-grow p-[3.5rem]">
           <p className="text-lg font-semibold">About us</p>
           <h1 className="text-5xl font-bold mb-4">
             The Leading Real Estate Marketplace.

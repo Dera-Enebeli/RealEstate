@@ -127,7 +127,7 @@ export default function Slider() {
             </motion.div>
           </AnimatePresence>
           <button className="sm:text-sm bg-orange-400 p-4 text-white text-sm">
-            PROPERTIES LISTINGS
+            PROPERTIES LISTINGSeirbgpqiuheuryhiehguhkriughquh4iurhe
           </button>
         </div>
       </MotionConfig>

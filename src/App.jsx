@@ -9,68 +9,65 @@ import Contact from "./pages/Contact";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Slider from "./Slider";
 import Body from "./pages/Body";
-// import App from "./App";
-import Caro from "./Caro";
 import Blog from "./pages/Blog";
-// import Carousel from "./carousel.components";
 
-export default function App() {
-  function PageLayout() {
-    return (
-      <div className="overflow-hidden">
-        <Home />
-        <Header />
-        <Outlet />
-        <Footer />
-      </div>
-    );
-  }
-
-  const pageRoutes = createBrowserRouter([
-    {
-      path: "/",
-      element: <PageLayout />,
-      children: [
-        {
-          path: "/",
-          element: (
-            <>
-              <Caro />
-              <Body />
-            </>
-          ),
-        },
-        {
-          path: "/about",
-          element: <About />,
-        },
-        {
-          path: "/project",
-          element: <Project />,
-        },
-        {
-          path: "/affiliate",
-          element: <Affiliate />,
-        },
-        {
-          path: "/contact",
-          element: <Contact />,
-        },
-        {
-          path: "/blog",
-          element: <Blog />
-        },
-      ],
-    },
-    {
-      path: "*",
-      element: <div>Error: Page Not Found</div>,
-    },
-  ]);
-
+function Layout() {
   return (
-    <div className="">
-      <RouterProvider router={pageRoutes}></RouterProvider>
+    <div className="overflow-hidden">
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
   );
+}
+
+function HomeLayout() {
+  return (
+    <>
+      <Home />
+      <Slider />
+      <Body />
+    </>
+  );
+}
+
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true, // Same as path: "/"
+        element: <HomeLayout />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "project",
+        element: <Project />,
+      },
+      {
+        path: "affiliate",
+        element: <Affiliate />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <div>Error: Page Not Found</div>,
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={routes} />;
 }
