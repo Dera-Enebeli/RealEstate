@@ -68,7 +68,7 @@ export default function Body() {
               </div>
               <div className="p-6">
                 <div className="flex items-center text-lg font-semibold text-newBlue mb-3">
-                  <HiLocationMarker className="mr-2 text-2xl text-orange-400" />
+                  <HiLocationMarker className="mr-2 text-2xl text-mainBlue" />
                   {home.location}
                 </div>
                 <div className="flex justify-between text-gray-600 mb-6">
@@ -84,7 +84,7 @@ export default function Body() {
                 </div>
                 <div className="flex justify-between items-center">
                   <Link to="/project">
-                    <button className="flex items-center bg-orange-400 text-white px-4 py-2 rounded-md hover:bg-orange-500 transition-colors duration-300">
+                    <button className="flex items-center bg-mainBlue text-white px-4 py-2 rounded-md hover:bg-orange-300 transition-colors duration-300">
                       View Properties
                       <BiRightArrowAlt className="ml-2 text-lg" />
                     </button>
@@ -194,7 +194,7 @@ export default function Body() {
       </section>
 
       {/* Blog Section */}
-      <section className="text-center flex justify-center flex-col items-center md:mt-20 mb-20">
+      <section className="text-center flex justify-center flex-col items-center mt-20 md:mt-20 mb-20">
         <div className="text-orange-400 mb-2">From our Blog</div>
         <div className="text-2xl md:text-5xl font-bold mb-4">
           Latest News & Events

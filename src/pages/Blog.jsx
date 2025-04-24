@@ -3,7 +3,7 @@ import React from "react";
 export default function Blog() {
   return (
     <div>
-      <section className="text-center flex justify-center flex-col items-center md:mt-[5rem] lg:mb-[rem]">
+      <section className="text-center flex justify-center flex-col items-center md:mt-[10rem] lg:mb-[10rem]">
         <div className="text-orange-400">From our Blog</div>
         <div>
           <div className="text-2xl md:text-5xl font-bold">

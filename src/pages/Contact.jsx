@@ -118,7 +118,7 @@ export default function Contact() {
             <a
               href="mailto:onyidorisluxuryapartments@gmail.com"
               className="text-gray-600 mt-2">
-              <div className="flex flex-col items-center p-6 border rounded-md cursor-pointe hover:bg-orange-300 hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
+              <div className="flex flex-col items-center p-6 border rounded-md cursor-pointe hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
                 <FaPhone className="text-4xl text-mainBlue mb-4" />
                 <h3 className="text-xl font-bold">Email</h3>
                 <p className="text-gray-600 mt-2">
@@ -133,7 +133,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="block">
-              <div className="flex flex-col items-center p-6 border rounded-md cursor-pointer bg-orange-200 hover:bg-orange-300 hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
+              <div className="flex flex-col items-center p-6 border rounded-md cursor-pointer hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
                 <FaPhone className="text-4xl text-mainBlue mb-4" />
                 <h3 className="text-xl font-bold">Phone Number</h3>
                 <p className="text-gray-600 mt-2">
@@ -143,7 +143,7 @@ export default function Contact() {
             </a>
 
             {/* Address */}
-            <div className="flex flex-col items-center p-6 border rounded-md cursor-pointer hover:bg-orange-300 hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
+            <div className="flex flex-col items-center p-6 border rounded-md cursor-pointer hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
               <FaMapMarkerAlt className="text-4xl text-mainBlue mb-4" />
               <h3 className="text-xl font-bold">Office Address</h3>
               <p className="text-gray-600 mt-2 text-center">
