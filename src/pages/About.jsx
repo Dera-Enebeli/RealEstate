@@ -25,11 +25,11 @@ export default function About() {
           <img
             src="/main_apt4.jpg"
             alt="Apartment"
-            className="h-[40rem] w-[30rem] shrink-0 shadow-lg object-cover rounded-md border-t-[1rem] border-r-[1rem] border-b-[1rem] border-l-[1rem] border-white"
+            className="h-[40rem] w-[40rem] shrink-0 shadow-lg object-cover rounded-md border-t-[1rem] border-r-[1rem] border-b-[1rem] border-l-[1rem] border-white"
           />
         </div>
 
-        <div className="flex-grow p-[3.5rem]">
+        <div className="flex-grow">
           <p className="text-lg font-semibold">About us</p>
           <h1 className="text-5xl font-bold mb-4">
             The Leading Real Estate Marketplace.

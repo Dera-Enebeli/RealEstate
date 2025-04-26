@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import {
-  BiRightArrowAlt,
-  BiRuler,
-} from "react-icons/bi";
+import { BiRightArrowAlt, BiRuler } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoBedOutline } from "react-icons/io5";
 import Cards from "../data/Cards";
@@ -12,9 +9,33 @@ import { Link } from "react-router-dom";
 
 export default function Body() {
   const homes = [
-    { id: 1, image: "/apt1.jpg", location: "Asokoro - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
-    { id: 2, image: "/apt2.jpg", location: "Wuse 2 - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
-    { id: 3, image: "main_apt4.jpg", location: "Maitama - Abuja", beds: 4, size: "10x10 m", area: "1600 m", price: "₦100,000" },
+    {
+      id: 1,
+      image: "/apt1.jpg",
+      location: "Asokoro - Abuja",
+      beds: 4,
+      size: "10x10 m",
+      area: "1600 m",
+      price: "₦100,000",
+    },
+    {
+      id: 2,
+      image: "/apt2.jpg",
+      location: "Wuse 2 - Abuja",
+      beds: 4,
+      size: "10x10 m",
+      area: "1600 m",
+      price: "₦100,000",
+    },
+    {
+      id: 3,
+      image: "main_apt4.jpg",
+      location: "Maitama - Abuja",
+      beds: 4,
+      size: "10x10 m",
+      area: "1600 m",
+      price: "₦100,000",
+    },
   ];
 
   return (
@@ -30,8 +51,7 @@ export default function Body() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="w-72 h-40 bg-white rounded-xl shadow-xl flex flex-col items-center justify-center p-6 hover:scale-105 transition-transform duration-300"
-            >
+              className="w-72 h-40 bg-white rounded-xl shadow-xl flex flex-col items-center justify-center p-6 hover:scale-105 transition-transform duration-300">
               <div className="text-3xl font-extrabold text-newBlue mb-2">
                 {stat.value}
               </div>
@@ -57,8 +77,7 @@ export default function Body() {
           {homes.map((home) => (
             <div
               key={home.id}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
-            >
+              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={home.image}
@@ -73,13 +92,16 @@ export default function Body() {
                 </div>
                 <div className="flex justify-between text-gray-600 mb-6">
                   <div className="flex items-center">
-                    <IoBedOutline className="mr-1 text-newBlue" />{home.beds} Bed
+                    <IoBedOutline className="mr-1 text-newBlue" />
+                    {home.beds} Bed
                   </div>
                   <div className="flex items-center">
-                    <BiRuler className="mr-1 text-newBlue" />{home.size}
+                    <BiRuler className="mr-1 text-newBlue" />
+                    {home.size}
                   </div>
                   <div className="flex items-center">
-                    <BiRightArrowAlt className="mr-1 text-newBlue" />{home.area}
+                    <BiRightArrowAlt className="mr-1 text-newBlue" />
+                    {home.area}
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
@@ -89,7 +111,9 @@ export default function Body() {
                       <BiRightArrowAlt className="ml-2 text-lg" />
                     </button>
                   </Link>
-                  <span className="text-newBlue font-bold text-lg">{home.price}</span>
+                  <span className="text-newBlue font-bold text-lg">
+                    {home.price}
+                  </span>
                 </div>
               </div>
             </div>
@@ -101,7 +125,9 @@ export default function Body() {
       <section className="flex text-gray-900 font-semibold justify-center py-12">
         <div>
           <p className="text-center text-orange-200 pb-4">Our Services</p>
-          <p className="text-2xl md:text-5xl text-gray-900 font-bold">Our Main Focus</p>
+          <p className="text-2xl md:text-5xl text-gray-900 font-bold">
+            Our Main Focus
+          </p>
         </div>
       </section>
 
@@ -152,8 +178,9 @@ export default function Body() {
           </div>
 
           <Link to="/project">
-            <button className="bg-newBlue rounded-md text-white p-4 mt-6">
-              Book Now
+            <button className="relative group overflow-hidden bg-newBlue text-white p-4 mt-6 rounded-md transition-all duration-300">
+              <span className="relative z-10">Book Now</span>
+              <span className="absolute inset-0 bg-orange-300 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
             </button>
           </Link>
         </div>
@@ -161,7 +188,11 @@ export default function Body() {
 
       {/* Contact & Map Section */}
       <section className="relative">
-        <img src="/new_map2.jpg" alt="Map" className="w-full h-[18rem] object-cover" />
+        <img
+          src="/new_map2.jpg"
+          alt="Map"
+          className="w-full h-[18rem] object-cover"
+        />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
           <p className="pb-6 text-orange-200">// Have any enquiries? //</p>
           <h1 className="text-xl md:text-6xl font-bold text-white">
@@ -172,8 +203,7 @@ export default function Body() {
               href="https://wa.me/2348136271063"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
+              className="cursor-pointer">
               <BiLogoWhatsapp
                 size={50}
                 className="text-orange-200 hover:text-green-500 transition-colors duration-300"
@@ -182,8 +212,7 @@ export default function Body() {
 
             <a
               href="mailto:onyidorisluxuryapartments@gmail.com"
-              className="cursor-pointer"
-            >
+              className="cursor-pointer">
               <SiGmail
                 size={50}
                 className="text-orange-200 hover:text-red-400 transition-colors duration-300"

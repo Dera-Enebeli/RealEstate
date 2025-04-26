@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-200 mb-4">Contact Us</h3>
+          <h3 className="text-lg font-bold mb-4">Contact Us</h3>
           <ul>
             <li className="mb-2">
               <h to="">No 817 Edmund Medani Crescent Mabushi, Abuja, FCT.</h>
