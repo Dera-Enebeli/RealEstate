@@ -82,7 +82,7 @@ export default function Slider() {
         </h2>
 
         <div className="mx-auto w-max bg-orange-300 hover:shadow-[0_20px_60px_rgba(255,115,0,0.5)] transition-all duration-300 text-white px-6 py-4 text-md font-bold">
-           PROPERTIES LISTINGS
+           PROPERTY LISTINGS
         </div>
       </div>
     </div>
