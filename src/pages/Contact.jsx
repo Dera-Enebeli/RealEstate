@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { HiHome } from "react-icons/hi";
+import { SiGmail } from "react-icons/si";
+
 import {
   FaEnvelope,
   FaPhone,
@@ -119,7 +121,7 @@ export default function Contact() {
               href="mailto:onyidorisluxuryapartments@gmail.com"
               className="text-gray-600 mt-2">
               <div className="flex flex-col items-center p-6 border rounded-md cursor-pointe hover:shadow-[0_4px_20px_rgba(255,115,0,0.5)] transition-all duration-300">
-                <FaPhone className="text-4xl text-mainBlue mb-4" />
+              <SiGmail className="text-4xl text-mainBlue mb-4" />
                 <h3 className="text-xl font-bold">Email</h3>
                 <p className="text-gray-600 mt-2">
                   onyidorisluxuryapartments@gmail.com

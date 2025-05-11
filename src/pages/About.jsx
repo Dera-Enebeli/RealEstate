@@ -25,7 +25,7 @@ export default function About() {
           <img
             src="/main_apt4.jpg"
             alt="Apartment"
-            className="h-[40rem] w-[40rem] shrink-0 shadow-lg object-cover rounded-md border-t-[1rem] border-r-[1rem] border-b-[1rem] border-l-[1rem] border-white"
+            className="h-[50rem] w-[40rem] shrink-0 shadow-lg object-cover rounded-md border-t-[1rem] border-r-[1rem] border-b-[1rem] border-l-[1rem] border-white"
           />
         </div>
 

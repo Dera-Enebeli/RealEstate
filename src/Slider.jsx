@@ -76,12 +76,13 @@ export default function Slider() {
       {/* Static Overlay - NO LONGER MOVES */}
       <div
         onClick={() => navigate("/project")}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 w-[85vw] md:w-[60vw] lg:w-[30vw] bg-white/70 p-8 shadow-2xl cursor-pointer h-[16rem] flex flex-col justify-center items-center">
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 w-[85vw] md:w-[60vw] lg:w-[30vw] max-w-[90vw] bg-white/70 p-8 shadow-2xl cursor-pointer h-[16rem] flex flex-col justify-center items-center scale-[0.9] sm:scale-100">
         <h2 className="text-center text-newBlue font-semibold text-xl md:text-4xl mb-4">
           {captions[current]}
         </h2>
+
         <div className="mx-auto w-max bg-orange-300 hover:shadow-[0_20px_60px_rgba(255,115,0,0.5)] transition-all duration-300 text-white px-6 py-4 text-md font-bold">
-          EXPLORE PROPERTIES
+           PROPERTIES LISTINGS
         </div>
       </div>
     </div>
